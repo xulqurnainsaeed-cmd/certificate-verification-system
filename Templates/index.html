@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Certificate Verification</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <!-- TOP NAVBAR -->
+
+    <header class="topbar">
+
+        <div class="topbar-container">
+
+            <div class="logo-area">
+
+                <div class="logo-circle"></div>
+
+                <div class="logo-text">
+                    Certificate Verification
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- BREADCRUMB -->
+
+    <section class="breadcrumb-section">
+
+        <div class="breadcrumb-container">
+
+            <span>Home</span>
+
+            <span class="arrow">›</span>
+
+            <span>Document Verification</span>
+
+        </div>
+
+    </section>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-wrapper">
+
+        <div class="verification-wrapper">
+
+            <!-- HEADER -->
+
+            <div class="verification-header">
+
+                <div class="verification-title">
+
+                    <div class="small-logo"></div>
+
+                    <h2>Document Verification</h2>
+
+                </div>
+
+                <button class="share-btn">
+                    Share
+                </button>
+
+            </div>
+
+            <!-- BODY -->
+
+            <div class="verification-body">
+
+                <!-- LEFT SIDE -->
+
+                <div class="info-sidebar">
+
+                    <p>
+                        This service is provided through the certificate verification infrastructure.
+                    </p>
+
+                    <p>
+                        This process should take approximately 1 minute.
+                    </p>
+
+                    <p>
+                        Enter the reference number to continue verification.
+                    </p>
+
+                </div>
+
+                <!-- RIGHT SIDE -->
+
+                <div class="form-section">
+
+                    <p class="top-description">
+                        You can verify all certificate documents here.
+                    </p>
+
+                    <div class="form-box">
+
+                        <h3>Document Verification</h3>
+
+                        <form action="/search" method="GET">
+
+                            <label>
+                                Reference Number
+                            </label>
+
+                            <input
+                                type="text"
+                                name="reference"
+                                placeholder="Enter Reference Number"
+                                required
+                            >
+
+                            <small>
+                                Enter the certificate reference number.
+                            </small>
+
+                            <div class="button-area">
+
+                                <button type="submit">
+                                    Continue
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                    <!-- QR BOX -->
+
+                    <div class="qr-info-box">
+
+                        <div class="qr-icon"></div>
+
+                        <div class="qr-text">
+
+                            <p>
+                                You can also verify certificates by scanning the QR code on the certificate.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Verification Result</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <div class="topbar-container">
+
+            <div class="logo-area">
+
+                <div class="logo-circle"></div>
+
+                <div class="logo-text">
+                    Certificate Verification
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- MAIN -->
+
+    <main class="main-wrapper">
+
+        {% if certificate %}
+
+        <div class="verification-wrapper">
+
+            <!-- HEADER -->
+
+            <div class="verification-header">
+
+                <div class="verification-title">
+
+                    <div class="small-logo"></div>
+
+                    <h2>Verification Result</h2>
+
+                </div>
+
+            </div>
+
+            <!-- BODY -->
+
+            <div class="verification-body">
+
+                <!-- SIDEBAR -->
+
+                <div class="info-sidebar">
+
+                    <p>
+                        Verification completed successfully.
+                    </p>
+
+                    <p>
+                        Certificate found in the system database.
+                    </p>
+
+                </div>
+
+                <!-- MAIN CONTENT -->
+
+                <div class="form-section">
+
+                    <!-- ACTION BUTTONS -->
+
+                    <div class="action-buttons">
+
+                        <a href="/" class="new-btn">
+                            New Verification
+                        </a>
+
+                        <a
+                            href="{{ url_for('static', filename='certificates/' + certificate[6]) }}"
+                            download
+                            class="download-btn"
+                        >
+                            Download Certificate
+                        </a>
+
+                    </div>
+
+                    <!-- INFO BOX -->
+
+                    <div class="success-box">
+
+                        Certificate successfully verified.
+                    </div>
+
+                    <!-- PDF PREVIEW -->
+
+                    <div class="pdf-viewer">
+
+                        <iframe
+                            src="{{ url_for('static', filename='certificates/' + certificate[6]) }}"
+                            width="100%"
+                            height="700px"
+                        >
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% else %}
+
+        <div class="verification-wrapper">
+
+            <div class="verification-header">
+
+                <div class="verification-title">
+
+                    <div class="small-logo"></div>
+
+                    <h2>Invalid Certificate</h2>
+
+                </div>
+
+            </div>
+
+            <div class="form-section">
+
+                <div class="invalid-box">
+
+                    Certificate not found in database.
+
+                </div>
+
+                <a href="/" class="new-btn">
+                    Back to Verification
+                </a>
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+    </main>
+
+</body>
+</html>
