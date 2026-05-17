@@ -1,6 +1,7 @@
 import sqlite3
 
 conn = sqlite3.connect('certificates.db')
+
 cursor = conn.cursor()
 
 cursor.execute('''
@@ -16,16 +17,17 @@ INSERT INTO certificates
 
 VALUES
 (
-    'CERT-001',
-    'Ali Khan',
-    'Web Development',
-    '2026-05-15',
+    'CERT-002',
+    'Zulqurnain Saeed',
+    'Digital Marketing',
+    '2020-05-26',
     'Valid',
-    'CERT-001.pdf'
+    'CERT-002.pdf'
 )
 ''')
 
 conn.commit()
+
 conn.close()
 
-print("Certificate Added Successfully")
+print("Certificate inserted successfully")
