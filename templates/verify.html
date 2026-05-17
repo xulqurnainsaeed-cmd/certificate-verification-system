@@ -6,36 +6,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Verification Result</title>
+    <title>Certificate Verification</title>
 
     <link
         rel="stylesheet"
         href="{{ url_for('static', filename='style.css') }}"
     >
+  
+    <link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
 
 </head>
 
 <body>
-
-    <!-- TOPBAR -->
+    <!-- TOP NAVBAR -->
 
     <header class="topbar">
 
-        <div class="topbar-container">
+    <div class="topbar-container">
 
-            <div class="logo-area">
+        <div class="logo-area">
 
-                <div class="logo-circle"></div>
-
-                <div class="logo-text">
-                    Certificate Verification
-                </div>
-
-            </div>
+            <img
+                src="{{ url_for('static', filename='images/logo.png') }}"
+                alt="logo"
+                class="topbar-logo"
+            >
 
         </div>
 
-    </header>
+    </div>
+
+</header>
+ <!-- BREADCRUMB -->
+
+    <section class="breadcrumb-wrapper">
+
+    <div class="breadcrumb-section">
+
+        <div class="breadcrumb-container">
+
+            <img
+    src="{{ url_for('static', filename='images/home.png') }}"
+    alt="Home"
+    class="home-icon"
+>
+
+            <span class="arrow">›</span>
+
+            <span class="breadcrumb-text">
+                Document Verification
+            </span>
+
+            <span class="arrow">›</span>
+
+        </div>
+
+    </div>
+
+</section>
 
     <!-- MAIN -->
 
@@ -51,11 +82,23 @@
 
                 <div class="verification-title">
 
-                    <div class="small-logo"></div>
+    <img
+        src="{{ url_for('static', filename='images/verify-logo.png') }}"
+        alt="Verification Logo"
+        class="verification-logo"
+    >
 
-                    <h2>Verification Result</h2>
+    <h2>Document Verification</h2>
 
-                </div>
+</div>
+
+                <button class="share-btn">
+
+    <i class="fa-solid fa-share-nodes share-icon"></i>
+
+    <span>Share</span>
+
+</button>
 
             </div>
 
@@ -85,19 +128,27 @@
 
                     <div class="action-buttons">
 
-                        <a href="/" class="new-btn">
-                            New Verification
-                        </a>
+    <a href="/" class="new-btn">
 
-                        <a
-                            href="{{ url_for('static', filename='certificates/' + certificate[6]) }}"
-                            download
-                            class="download-btn"
-                        >
-                            Download Certificate
-                        </a>
+        <i class="fa-solid fa-plus"></i>
 
-                    </div>
+        New Verification
+
+    </a>
+
+    <a
+    href="{{ url_for('static', filename='certificates/' + certificate[6]) }}"
+    download
+    class="download-btn"
+>
+
+        <i class="fa-solid fa-download"></i>
+
+        Download the file
+
+    </a>
+
+</div>
 
                     <!-- INFO BOX -->
 

@@ -1,11 +1,18 @@
 import qrcode
 
+# CERTIFICATE REFERENCE
 reference = "CERT-001"
 
-url = f"http://127.0.0.1:5000/verify/{reference}"
+# LIVE WEBSITE URL
+base_url = "https://certificate-verification-system-ssvl.onrender.com"
 
-img = qrcode.make(url)
+# FULL VERIFICATION URL
+verification_url = f"{base_url}/verify/{reference}"
 
+# GENERATE QR
+img = qrcode.make(verification_url)
+
+# SAVE QR IMAGE
 img.save(f"static/qr_codes/{reference}.png")
 
 print("QR Code Generated Successfully")
