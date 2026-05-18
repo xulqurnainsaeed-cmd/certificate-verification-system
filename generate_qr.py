@@ -4,7 +4,7 @@ import qrcode
 reference = "8D6R-02ZA-81UD"
 
 # LIVE WEBSITE URL
-base_url = "https://certificate-verification-system-ssvl.onrender.com"
+base_url = "https://www.turkiye-edu.com"
 
 # FULL VERIFICATION URL
 verification_url = f"{base_url}/verify/{reference}"
