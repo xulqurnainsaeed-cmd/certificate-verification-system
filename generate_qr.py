@@ -1,7 +1,7 @@
 import qrcode
 
 # CERTIFICATE REFERENCE
-reference = "CERT-002"
+reference = "8D6R-02ZA-81UD"
 
 # LIVE WEBSITE URL
 base_url = "https://certificate-verification-system-ssvl.onrender.com"

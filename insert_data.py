@@ -17,12 +17,12 @@ INSERT INTO certificates
 
 VALUES
 (
-    'CERT-002',
-    'Zulqurnain Saeed',
+    '8D6R-02ZA-81UD',
+    'WAEN N.A',
     'Digital Marketing',
     '2020-05-26',
     'Valid',
-    'CERT-002.pdf'
+    '8D6R-02ZA-81UD.pdf'
 )
 ''')
 
