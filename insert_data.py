@@ -17,12 +17,12 @@ INSERT INTO certificates
 
 VALUES
 (
-    '8D6R-02ZA-81UD',
-    'WAEN N.A',
-    'Digital Marketing',
-    '2020-05-26',
+    'YOKME2KHUNOA6C5TTK-101647',
+    'HASSAN NAGY HASSAN ABDELHAMID KHEDR',
+    'Lisans diplomasi',
+    '2026-07-10',
     'Valid',
-    '8D6R-02ZA-81UD.pdf'
+    'YOKME2KHUNOA6C5TTK-101647.pdf'
 )
 ''')
 
